@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.epam.testapp.model">
+    <class name="News" table="T_NEWS" lazy="true">
+        <id name="id" type="java.lang.Integer" column="ID">
+            <generator class="sequence">
+                <param name="sequence">T_NEWS_SEQ</param>
+            </generator>
+        </id>
+        <property name="title" column="TITLE" type="string"/>
+        <property name="brief" column="BRIEF" type="string"/>
+        <property name="content" column="CONTENT" type="string"/>
+        <property name="date" column="NEWSDATE" type="java.sql.Date"/>
+    </class>
+</hibernate-mapping>
